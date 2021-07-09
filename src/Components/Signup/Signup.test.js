@@ -1,9 +1,27 @@
 import '@testing-library/jest-dom';
+import { render,fireEvent } from '@testing-library/react';
+import Signup from './Signup'
+import App from '../../App'
 
 describe("Email Input",()=>{
-    test.todo("If it is blank show red border and error msg")
-    test.todo("To check whether email has '@'&'.'")
-    test.todo("If invalid show red border and error msg")
+    test("If email input is there or not",()=>{
+        render(<App/>)
+        const email = document.querySelector("#email")
+        expect(email).toBeInTheDocument()
+    })
+    test("To check whether email has '@'&'.'",()=>{
+        render(<App />)
+        const email = document.querySelector("#email")
+        expect(email.classList[0]).toBe("hidden")
+
+    })
+    test("If invalid email or not",()=>{
+        render(<App />)
+        const email = document.querySelector("#email")
+        fireEvent.change(email, { target: { value: 'aa@gmail.com'}})
+        expect(email.value).toMatch(/@/)
+        expect(email.value).toMatch(/./)
+    })
 })
 
 describe("Password Input",()=>{

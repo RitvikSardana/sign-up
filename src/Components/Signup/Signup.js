@@ -28,16 +28,16 @@ function Signup() {
                     className = {emailInput === ""? "hidden" : "active"} 
                 >
                 </input>
+                {/* { && <p>incorrect</p>} */}
                 <input 
                     type='password' 
                     id = "password" 
                     placeholder='Enter your Password' 
                     required
                 >
-
                 </input>
                 <input type='password' id = "confirm_password" placeholder='Re-enter your Password' required></input>
-                <button>Signup</button>
+                <button disabled>Signup</button>
             </form>
         </div>
     )

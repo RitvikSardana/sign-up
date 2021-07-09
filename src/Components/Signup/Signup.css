@@ -10,7 +10,8 @@ h2{
     justify-content: space-between;
     align-items: center;
     border: 2px solid #234fac;
-    margin: 20px;
+    margin: 30px;
+    width: 400px;
     /* flex-basis: 800px; */
 }
 
@@ -29,5 +30,13 @@ form input{
 }
 
 .hidden{
+    border: 2px solid red;
+} 
+
+.active{
+    border:2px solid green;
+}
+
+#email:invalid{
     border: 2px solid red;
 }

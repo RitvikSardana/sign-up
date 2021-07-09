@@ -1,0 +1,23 @@
+*{
+    /* background-color: beige; */
+}
+h2{
+    margin:10px 0px;
+}
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #234fac;
+    margin: 20px;
+    /* flex-basis: 800px; */
+}
+
+.signup > form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 540px;
+}

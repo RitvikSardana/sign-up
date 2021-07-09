@@ -3,12 +3,12 @@ import './Signup.css'
 
 function Signup() {
 
-    const [email,setEmail] = useState("")
+    const [emailInput,setEmailInput] = useState("")
 
 
     const emailHandler = (e) =>{
-        setEmail(e.target.value)
-        // email.
+        setEmailInput(e.target.value)
+        console.log()
     }
 
     const submitHandler = (e) =>{
@@ -19,18 +19,25 @@ function Signup() {
             <h2>Signup here</h2>
             <form action="submit" onSubmit={submitHandler}>
                 <input 
-                type='email' 
-                id = "email" 
-                placeholder='Enter your email' 
-                value = {email} 
-                onChange={(e)=>emailHandler(e)}
-                required 
+                    type='email' 
+                    id = "email" 
+                    placeholder='Enter your email' 
+                    value = {emailInput} 
+                    onChange={(e)=>emailHandler(e)}
+                    required
+                    className = {emailInput === ""? "hidden" : "active"} 
                 >
                 </input>
-                <input type='password' id = "password" placeholder='Enter your Password' required></input>
-                <input type='password' id = "confirm_password" placeholder='Enter your Password' required></input>
-                <button>Signup</button>
+                <input 
+                    type='password' 
+                    id = "password" 
+                    placeholder='Enter your Password' 
+                    required
+                >
 
+                </input>
+                <input type='password' id = "confirm_password" placeholder='Re-enter your Password' required></input>
+                <button>Signup</button>
             </form>
         </div>
     )

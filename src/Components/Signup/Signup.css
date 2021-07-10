@@ -5,14 +5,13 @@ h2{
     margin:10px 0px;
 }
 .signup{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #234fac;
-    margin: 30px;
-    width: 400px;
-    /* flex-basis: 800px; */
+    display: grid;
+    place-items: center;
+    /* border: 2px solid #9ba0aa; */
+    margin: 20px;
+    min-width: 100px;
+    background-color: rgb(120, 177, 211);
+    border-radius: 2rem;
 }
 
 .signup > form{
@@ -23,20 +22,24 @@ h2{
     flex-basis: 540px;
 }
 form input{
-    margin: 30px;
+    margin: 20px;
     height: 50px;
     padding: 10px;
     width: 240px;
 }
 
-.hidden{
+/* .hidden{
     border: 2px solid red;
 } 
 
 .active{
     border:2px solid green;
-}
+} */
 
 #email:invalid{
     border: 2px solid red;
+}
+
+#email:valid{
+    border:2px solid green
 }

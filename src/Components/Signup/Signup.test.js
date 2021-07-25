@@ -12,7 +12,6 @@ describe("Email Input",()=>{
         render(<Signup />)
         const email = screen.getByTestId('emailTest')
         expect(email.classList[0]).toBe("hidden")
-
     })
     test("To check whether email has '@'&'.'",()=>{
         render(<Signup />)

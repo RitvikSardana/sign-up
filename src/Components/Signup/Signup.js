@@ -11,20 +11,16 @@ function Signup() {
         setEmailInput(e.target.value)
         // console.log()
     }
-    const passwordHandler = (e)=>{
-        setPasswordInput(e.target.value)
-    }
 
     const submitHandler = (e) =>{
         e.preventDefault()
-        emailError()
     }
-    const emailError = () =>{
-        // emailInput==""?"Cant be blank":"a" 
-        if(emailInput==""){
-            return "Cant be blank"
-        }
-    }
+    // const emailError = () =>{
+    //     // emailInput==""?"Cant be blank":"a" 
+    //     if(emailInput==""){
+    //         return "Cant be blank"
+    //     }
+    // }
 
     return (
         <div className = "signup" >
@@ -62,7 +58,9 @@ function Signup() {
                 <button 
                     data-testid = 'buttonTest'
                     disabled
-                >Signup</button>
+                >
+                Signup
+                </button>
             </form>
         </div>
     )

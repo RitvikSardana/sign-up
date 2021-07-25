@@ -5,12 +5,16 @@ h2{
     margin:10px 0px;
 }
 .signup{
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* place-items: center; */
     /* border: 2px solid #9ba0aa; */
     margin: 20px;
-    min-width: 100px;
-    background-color: rgb(120, 177, 211);
+    width: 400px;
+    /* max-wid */
+    background-color: #ddd;
     border-radius: 2rem;
 }
 
@@ -28,13 +32,6 @@ form input{
     width: 240px;
 }
 
-/* .hidden{
-    border: 2px solid red;
-} 
-
-.active{
-    border:2px solid green;
-} */
 
 #email:invalid{
     border: 2px solid red;
